@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background: linear-gradient(black, 70%, #0d1a42);
+  color: #fff;
+  font-family: monospace;
+  font-weight: 900;
+  font-size: 100px;
+  text-align: center;
+  margin-top: 30%;
+  margin-bottom: 30%;
+}
+</style>
+</head>
+<body>
+  <div id="time">00:00:00</div>
+  <script>
+  const timeElement = document.getElementById("time");
+  setInterval(() => {
+    const date = new Date();
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    const seconds = date.getSeconds().toString().padStart(2, '0');
+    timeElement.textContent = `${hours}:${minutes}:${seconds}`;
+  }, 1000);
+  </script>
+</body>
+</html>
+cltkfq 
