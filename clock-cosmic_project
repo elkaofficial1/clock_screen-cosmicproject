@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 import datetime
 
 app = Flask(__name__)
@@ -12,10 +12,8 @@ def date_test():
     time_str = dt_now.strftime("%H:%M")     # Формат времени: ЧЧ:ММ
     seconds_str = dt_now.strftime("%S")      # Получение только секунд
 
-    # Формирование строки вывода
-    output = f"Дата: {date_str}.<br>Время: {time_str}.<br>Секунды: {seconds_str}."
-    return output
+    # Передаем данные в шаблон
+    return render_template('clock1.html', date=date_str, time=time_str, seconds=seconds_str)
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080)
-    
