@@ -8,5 +8,5 @@
 - [ ] сами часы (логично)
 - [ ] работа на локальном ip (не зависите от серверов)
 # спасибо разрабочики cosmic_project!!
-- 1. elkaofficial1
-- 2. ZXCnerd
+1. elkaofficial1
+2. ZXCnerd
