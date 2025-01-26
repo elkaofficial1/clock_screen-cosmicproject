@@ -1,0 +1,21 @@
+from flask import Flask
+import datetime
+
+app = Flask(__name__)
+
+@app.route('/')
+def date_test():
+    dt_now = datetime.datetime.now()
+
+    # Форматирование даты и времени
+    date_str = dt_now.strftime("%Y-%m-%d")  # Формат даты: ГГГГ-ММ-ДД
+    time_str = dt_now.strftime("%H:%M")     # Формат времени: ЧЧ:ММ
+    seconds_str = dt_now.strftime("%S")      # Получение только секунд
+
+    # Формирование строки вывода
+    output = f"Дата: {date_str}.<br>Время: {time_str}.<br>Секунды: {seconds_str}."
+    return output
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=8080)
+    
